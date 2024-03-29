@@ -26,27 +26,6 @@ if(current_month >= month):
 else:
     old_year = year_now - years + 1
 
-print ("В якій день ти народився (від 1 до 31)")
-day = int(input())
-
-if(day in range(1, 6)):
-    printing_day_text = "Супер я чув що люди які народилися в ці дні дуже розумні особистості"
-elif(day in range(6, 11)):
-    printing_day_text = "Супер я чув що люди які народилися в ці дні дуже добрі особистості"
-elif(day in range(11, 16)):
-    printing_day_text = "Супер я чув що люди які народилися в ці дні дуже щедрі особистості"
-elif(day in range(16, 21)):
-    printing_day_text = "Супер я чув що люди які народилися в ці дні дуже амбіціозні особистості"
-elif(day in range(21, 26)):
-    printing_day_text = "Супер я чув що люди які народилися в ці дні дуже винахідливі особистості"
-elif(day in range(26, 31)):
-    printing_day_text = "Супер я чув що люди які народилися в ці дні дуже твочрі особистості"
-elif(day == 31):
-    printing_day_text = "Супер я чув що люди які народилися в ці дні дуже твочрі, розумні, щедрі, амбіціозні, винахідливі особистості"
-else:
-    printing_day_text = "Ви мабуть з Поєни!!!"
-
-
 if(years % 2 == 0):
     old_year = str(old_year) + " (вінтажний дворянмн)"
 else:
@@ -68,6 +47,26 @@ MONTH_NAMES = {
 }
 
 printing_text = "О май гад, то ти народився аж у " + MONTH_NAMES[month] + " " + str((old_year))
+
+print ("В якій день ти народився (від 1 до 31)")
+day = int(input())
+
+if(day in range(1, 6)):
+    printing_day_text = "Супер я чув що люди які народилися в ці дні дуже розумні особистості"
+elif(day in range(6, 11)):
+    printing_day_text = "Супер я чув що люди які народилися в ці дні дуже добрі особистості"
+elif(day in range(11, 16)):
+    printing_day_text = "Супер я чув що люди які народилися в ці дні дуже щедрі особистості"
+elif(day in range(16, 21)):
+    printing_day_text = "Супер я чув що люди які народилися в ці дні дуже амбіціозні особистості"
+elif(day in range(21, 26)):
+    printing_day_text = "Супер я чув що люди які народилися в ці дні дуже винахідливі особистості"
+elif(day in range(26, 31)):
+    printing_day_text = "Супер я чув що люди які народилися в ці дні дуже твочрі особистості"
+elif(day == 31):
+    printing_day_text = "Супер я чув що люди які народилися в ці дні дуже твочрі, розумні, щедрі, амбіціозні, винахідливі особистості"
+else:
+    printing_day_text = "Ви мабуть з Поєни!!!"
 
 print(printing_text)
 print(printing_day_text)
