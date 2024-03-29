@@ -26,34 +26,48 @@ if(current_month >= month):
 else:
     old_year = year_now - years + 1
 
+print ("В якій день ти народився (від 1 до 31)")
+day = int(input())
+
+if(day in range(1, 6)):
+    printing_day_text = "Супер я чув що люди які народилися в ці дні дуже розумні особистості"
+elif(day in range(6, 11)):
+    printing_day_text = "Супер я чув що люди які народилися в ці дні дуже добрі особистості"
+elif(day in range(11, 16)):
+    printing_day_text = "Супер я чув що люди які народилися в ці дні дуже щедрі особистості"
+elif(day in range(16, 21)):
+    printing_day_text = "Супер я чув що люди які народилися в ці дні дуже амбіціозні особистості"
+elif(day in range(21, 26)):
+    printing_day_text = "Супер я чув що люди які народилися в ці дні дуже винахідливі особистості"
+elif(day in range(26, 31)):
+    printing_day_text = "Супер я чув що люди які народилися в ці дні дуже твочрі особистості"
+elif(day == 31):
+    printing_day_text = "Супер я чув що люди які народилися в ці дні дуже твочрі, розумні, щедрі, амбіціозні, винахідливі особистості"
+else:
+    printing_day_text = "Ви мабуть з Поєни!!!"
+
+
 if(years % 2 == 0):
     old_year = str(old_year) + " (вінтажний дворянмн)"
 else:
     old_year = str(old_year) + " (молоденжний аристорат)"
 
-if(month == 1):
-    printing_text = "О май гад, то ти народився аж у січні " + str((old_year))
-elif(month == 2):
-    printing_text = "О май гад, то ти народився аж у лютому " + str((old_year))
-elif(month == 3):
-    printing_text = "О май гад, то ти народився аж у березні " + str((old_year))
-elif(month == 4):
-    printing_text = "О май гад, то ти народився аж у квітні " + str((old_year))
-elif(month == 5):
-    printing_text = "О май гад, то ти народився аж у травні " + str((old_year))
-elif(month == 6):
-    printing_text = "О май гад, то ти народився аж у червні " + str((old_year))
-elif(month == 7):
-    printing_text = "О май гад, то ти народився аж у липні " + str((old_year))
-elif(month == 8):
-    printing_text = "О май гад, то ти народився аж у серпні " + str((old_year))
-elif(month == 9):
-    printing_text = "О май гад, то ти народився аж у вересні " + str((old_year))
-elif(month == 10):
-    printing_text = "О май гад, то ти народився аж у жовтні " + str((old_year))
-elif(month == 11):
-    printing_text = "О май гад, то ти народився аж у листопаді " + str((old_year))
-else:
-    printing_text = "О май гад, то ти народився аж у грудні " + str((old_year))
-    
+MONTH_NAMES = {
+    1: "січні",
+    2: "лютому",
+    3: "березні",
+    4: "квітні",
+    5: "травні",
+    6: "червні",
+    7: "липні",
+    8: "серпні",
+    9: "вересні",
+    10: "жовтні",
+    11: "листопаді",
+    12: "грудні"
+}
+
+printing_text = "О май гад, то ти народився аж у " + MONTH_NAMES[month] + " " + str((old_year))
+
 print(printing_text)
+print(printing_day_text)
